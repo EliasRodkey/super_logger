@@ -34,7 +34,6 @@ Set the overall run name at the top level of your program.
 Use this as the very first import to exforce across instances
 Logger.set_run_name(run_name)
 
-
 Create Logger instane:
 logger = Logger(logger_name)
 
@@ -50,6 +49,12 @@ logger.info(message)
 logger.warning(message)
 logger.error(message)
 logger.critical(message)
+
+Set message levels at a high level using _instances After importing other modules
+Logger[logger_name]: {dict of all initialized loggers from sub modules}
+Logger.loggers() = [list of logger names]
+logger_instance = Logger[logger_name]
+logger_instance.set_handler_level(handler_name, level)
 
 Clear log files
 logger.clear_todays_logs()
