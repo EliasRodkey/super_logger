@@ -93,3 +93,5 @@ if __name__ == "__main__":
     print(date)
     print(time)
     print(datetime_stamp)
+    print(ELoggingFormats.FORMAT_BASIC)
+    print(type(ELoggingFormats.FORMAT_BASIC))
